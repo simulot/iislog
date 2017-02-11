@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/simulot/golib/pipeline"
-	"github.com/simulot/iislogs/iis"
+	"github.com/simulot/iislog/iis"
 )
 
 // DeduplicateOperator creates an operator that remove duplicates

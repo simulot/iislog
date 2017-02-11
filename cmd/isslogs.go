@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/simulot/iislogs"
+	"github.com/simulot/iislog"
 )
 
 func main() {
