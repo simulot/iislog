@@ -1,4 +1,4 @@
-package iislogs
+package iislog
 
 import (
 	"fmt"

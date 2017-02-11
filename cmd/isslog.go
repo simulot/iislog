@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	app := iislogs.Application{}
+	app := iislog.Application{}
 	_, err := app.ParseCommandLine()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)

@@ -1,4 +1,4 @@
-package iislogs
+package iislog
 
 func unescape(s string) (ret string) {
 	inEscape := 0

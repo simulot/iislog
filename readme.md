@@ -1,4 +1,4 @@
-# iislogs
+# iislog
 
 iislog is a tool for fast search events in logs files produced by one or more IIS servers. Searches can be done for:
 * user
