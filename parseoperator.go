@@ -7,7 +7,7 @@ import (
 
 	"github.com/simulot/golib/file/walker"
 	"github.com/simulot/golib/pipeline"
-	"github.com/simulot/iislogs/iis"
+	"github.com/simulot/iislog/iis"
 )
 
 // ParserOperator create a operator for the pipeline in charge of
