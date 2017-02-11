@@ -7,8 +7,7 @@ iislog is a tool for fast search events in logs files produced by one or more II
 * url parts
 
 Reports can be limited to a range of dates or hours. 
-Static files can also be not included into the report.
-
+Static files can be ignored in the result.
 
 Result is send to console, in CSV format. First line has header.
 Example:
