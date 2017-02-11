@@ -10,23 +10,39 @@ Reports can be limited to a range of dates or hours.
 Static files can also be not included into the report.
 
 
+Resutls are diplayed on console, in CSV format. First line has header.
+Example:
+
+```
+date;status;s-ip;cs-username;cs-uri-stem;cs-uri-query;time-taken(ms);time-taken;status-label
+date;status;s-ip;cs-username;cs-uri-stem;cs-uri-query;time-taken(ms);time-taken;status-label
+"2017-01-31 09:08:40";500.0;10.30.136.200;DOMAIN\user;/myapp/;"|121|800a0046|File:___Permission_denied__Error_opening_log_file_C:\Windows\TEMP\API.Log";2246;2.246s;"Module or ISAPI error occurred"
+"2017-01-31 10:34:43";500.0;10.30.136.200;DOMAIN\user;/myapp/;"|121|800a0046|File:___Permission_denied__Error_opening_log_file_C:\Windows\TEMP\API.Log";1216;1.216s;"Module or ISAPI error occurred"
+"2017-01-31 10:35:03";404.0;10.30.136.200;-;/myapps/;"-";93;93ms;"Not found"
+"2017-01-31 10:35:14";500.0;10.30.136.200;DOMAIN\user;/myapp/;"|121|800a0046|File:___Permission_denied__Error_opening_log_file_C:\Windows\TEMP\API.Log";889;889ms;"Module or ISAPI error occurred"
+```
+
 ## Usage
 ```
 usage: iislog [<flags>] <file>...
 
-an application for searching in IIS logs files,
+a tool for searching in IIS logs files.
+
+  Author jfc@responsiveconsulting.fr
 
 Flags:
   --help                   Show context-sensitive help (also try --help-long and
                            --help-man).
   --from=DATETIME          get logs from 'DATETIME' UTC
   --to=DATETIME            get logs to 'DATETIME' UTC
-  --from-days-ago=DAYS     get log from DAYS ago
-  --to-days-ago=DAYS       get log until DAYS before today
+  --from-days-ago=DAYS     get logs from DAYS ago
+  --to-days-ago=DAYS       get logs until DAYS before today
+  --since=DURATION         get logs since DURATION. DURATION can be like 2s,
+                           24h...
   --url=URL ...            Reports lines containing url. Several --url options
                            can be given. Lines are reported whenever one url
                            matches
-  --user=USER ...          Reports lines from logged in USER. Several --user
+  --user=USER ...          Reports lines from authenticated USER. Several --user
                            options can be given. Lines are reported whenever an
                            user matches
   --errors                 filter logs on protocol errors (4xx and 5xx)
@@ -36,7 +52,7 @@ Flags:
                            like 200ms, 3s, 1m...
 
 Args:
-  <file>   file, path, zip archive
+  <file>  file, path, zip archive
 
 
 ```
